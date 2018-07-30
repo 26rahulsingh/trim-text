@@ -1,0 +1,21 @@
+{
+  "name": "trim-text",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  },
+  "repository": {
+  	"type": "git",
+  	"url": "https://github.com/26rahulsingh/trim-text"
+  },
+  "author": {
+  	"name": "Rahul Singh",
+  	"email": "singh.rahul26@hotmail.com"
+  },
+  "keywords": ["angular", "trim"],
+  "license": "MIT",
+  "bugs": {
+  	"url": "https://github.com/26rahulsingh/trim-text/issues"
+  }
+}
