@@ -1,27 +1,72 @@
-# Angular6TrimDirective
+[![npm](https://img.shields.io/npm/dt/trim-text.svg?style=flat-square)](https://www.npmjs.com/package/trim-text)
+[![GitHub release](https://img.shields.io/github/release/26rahulsingh/trim-text.svg?style=flat-square)](https://github.com/26rahulsingh/trim-text/releases)
+[![npm](https://img.shields.io/npm/l/trim-text.svg?style=flat-square)]()
+
+# trim-text
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
-## Development server
+Demo: https://stackblitz.com/github/26rahulsingh/trim-text
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+To install this library, run:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+$ npm install trim-text --save
+```
+and then in your Angular `AppModule`:
 
-## Build
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+import { AppComponent } from './app.component';
+// Import the library
+import { TrimTextModule } from 'trim-text';
 
-## Running unit tests
+@NgModule({
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    // Import the library
+    TrimTextModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Once library is imported, you can use its components, directives and pipes in your Angular application:
 
-## Running end-to-end tests
+```xml
+<!-- You can now use library component in app.component.html -->
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+<input type="text"  placeholder="input" [(ngModel)]="testInput" trimText />
+```
 
-## Further help
+## Features
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Add the `trimText` attribute to a text `input` or `textarea` element.
+Trim text after `blur`.
+`<input type="text" trimText />`
+`<textarea ... trimText></textarea>`
+
+## Development
+
+To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
+
+```bash
+$ npm run build
+```
+
+To lint all `*.ts` files:
+
+```bash
+$ npm run lint
+```
+
+## License
+
+MIT © [Rahul Singh](mailto:singh.rahul26@hotmail.com)
